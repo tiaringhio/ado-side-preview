@@ -3,6 +3,11 @@
   "name": "Azure DevOps Side Preview",
   "version": "0.1.0",
   "description": "Moves the Azure DevOps Markdown preview to the right and keeps the toolbar on its own row.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Azure DevOps Side Preview",
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": [
