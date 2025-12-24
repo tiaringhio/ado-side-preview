@@ -1,0 +1,211 @@
+.ado-md-side-preview .markdown-editor,
+.ado-md-side-preview .md-editor,
+.ado-md-side-preview .markdown-editor-container,
+.ado-md-side-preview .md-editor-container,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 12px !important;
+  align-items: stretch !important;
+}
+
+.ado-md-side-preview .markdown-editor textarea,
+.ado-md-side-preview .md-editor textarea,
+.ado-md-side-preview .markdown-editor .markdown-textarea,
+.ado-md-side-preview .md-editor .markdown-textarea,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview textarea.bolt-textfield-input {
+  flex: 1 1 0 !important;
+  width: 50% !important;
+  min-width: 0 !important;
+  order: 1 !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview > .flex-column {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield .flex-row.flex-grow.relative,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield .bolt-textfield-input {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield .flex-row.flex-grow.relative {
+  flex: 1 1 100% !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield .flex-row.flex-grow.relative {
+  flex: 1 1 auto !important;
+  align-self: stretch !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview textarea.bolt-textfield-input {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .flex-row.toolbar-area,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor-button-area {
+  grid-column: 1 / span 2 !important;
+  grid-row: 2 !important;
+  width: 100% !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .flex-row.toolbar-area {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor-button-area {
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+  flex: 0 0 auto !important;
+  width: max-content !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.new-css-for-md-fields:not(.show-markdown-preview) .flex-row.toolbar-area {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.new-css-for-md-fields:not(.show-markdown-preview) .markdown-editor-button-area {
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+  flex: 0 0 auto !important;
+  width: max-content !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.new-css-for-md-fields:not(.show-markdown-preview) textarea.bolt-textfield-input {
+  width: 100% !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .work-item-markdown-toolbar.markdown-toolbar {
+  overflow: visible !important;
+  flex-wrap: wrap !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .overflow-button-empty-div {
+  display: none !important;
+}
+
+.ado-md-side-preview .markdown-editor .markdown-editor-preview,
+.ado-md-side-preview .markdown-editor .md-preview,
+.ado-md-side-preview .markdown-editor .preview-container,
+.ado-md-side-preview .md-editor .markdown-editor-preview,
+.ado-md-side-preview .md-editor .md-preview,
+.ado-md-side-preview .md-editor .preview-container,
+.ado-md-side-preview .comment-editor .markdown-preview,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-preview,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .preview-container,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview [class*="preview"],
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-content.markdown-editor-preview.markdown-preview {
+  flex: 1 1 0 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  order: 2 !important;
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 12px !important;
+  align-items: stretch !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor > .flex-column {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor .markdown-content.markdown-editor-preview.markdown-preview {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor .flex-row.toolbar-area,
+.ado-md-side-preview .comment-editor.markdown-comment-editor .comment-message-button-area {
+  grid-column: 1 / span 2 !important;
+  grid-row: 2 !important;
+  width: 100% !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor .flex-row.toolbar-area {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor .comment-message-button-area {
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+  flex: 0 0 auto !important;
+  width: max-content !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor .markdown-editor.enter-new-comment.bolt-textfield {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor .markdown-editor.enter-new-comment.bolt-textfield .flex-row.flex-grow.relative,
+.ado-md-side-preview .comment-editor.markdown-comment-editor .markdown-editor.enter-new-comment.bolt-textfield .bolt-textfield-input {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  flex: 1 1 100% !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor:not(:has(.markdown-preview)) {
+  grid-template-columns: 1fr !important;
+}
+
+.ado-md-side-preview .comment-editor.markdown-comment-editor:not(:has(.markdown-preview)) > .flex-column {
+  grid-column: 1 !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .preview-mode-container {
+  grid-column: 1 / span 2 !important;
+  width: 100% !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .preview-mode-container .markdown-content.markdown-editor-preview.markdown-preview {
+  grid-column: 1 / span 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview:has(.markdown-editor-button-area .bolt-toggle-button:not(.checked)) {
+  grid-template-columns: 1fr !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview:has(.markdown-editor-button-area .bolt-toggle-button:not(.checked)) .markdown-content.markdown-editor-preview.markdown-preview,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview:has(.markdown-editor-button-area .bolt-toggle-button:not(.checked)) .markdown-preview,
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview:has(.markdown-editor-button-area .bolt-toggle-button:not(.checked)) .preview-container {
+  display: none !important;
+}
+
+.ado-md-side-preview .markdown-editor .markdown-editor-preview,
+.ado-md-side-preview .markdown-editor .md-preview,
+.ado-md-side-preview .md-editor .markdown-editor-preview,
+.ado-md-side-preview .md-editor .md-preview {
+  max-width: none !important;
+}
