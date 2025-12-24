@@ -1,0 +1,67 @@
+name: Publish Chrome Extension
+
+on:
+  push:
+    branches:
+      - "release/**"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set manifest version from release branch
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          VERSION="${BRANCH#release/v}"
+          if [[ "$VERSION" == "$BRANCH" ]]; then
+            echo "Branch name must be release/v<version> (got: $BRANCH)" >&2
+            exit 1
+          fi
+          if [[ ! "$VERSION" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then
+            echo "Version must be semver X.Y.Z (got: $VERSION)" >&2
+            exit 1
+          fi
+          VERSION="$VERSION" node -e "const fs=require('fs'); const path='manifest.json'; const v=process.env.VERSION; const m=JSON.parse(fs.readFileSync(path,'utf8')); m.version=v; fs.writeFileSync(path, JSON.stringify(m, null, 2) + '\\n');"
+
+      - name: Package extension
+        run: scripts/package.sh
+
+      - name: Upload to Chrome Web Store
+        uses: trmcnvn/chrome-extension-upload-action@v2
+        with:
+          file: azure-devops-side-preview.zip
+          extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+
+      - name: Create release tag
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          VERSION="${BRANCH#release/v}"
+          TAG="v${VERSION}"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists, skipping."
+            exit 0
+          fi
+          git tag "$TAG"
+          git push origin "$TAG"
+
+      - name: Open PR to master
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          VERSION="${BRANCH#release/v}"
+          TITLE="Release v${VERSION} to master"
+          BODY="Automated PR to merge release branch back into master."
+          if gh pr view "$BRANCH" --base master >/dev/null 2>&1; then
+            echo "PR already exists."
+            exit 0
+          fi
+          gh pr create --base master --head "$BRANCH" --title "$TITLE" --body "$BODY"
