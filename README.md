@@ -30,4 +30,7 @@ Include only these files in the ZIP:
 - `icons/*` (PNG: 16, 32, 48, 128)
 
 ## License
-Add a license if you plan to publish on the store.
+MIT License. See [LICENSE](LICENSE).
+
+## Privacy Policy
+See [PRIVACY_POLICY.md](PRIVACY_POLICY.md).
