@@ -34,7 +34,7 @@ jobs:
         run: scripts/package.sh
 
       - name: Upload to Chrome Web Store
-        uses: trmcnvn/chrome-extension-upload@v2
+        uses: mnao305/chrome-extension-upload@v5.0.0
         with:
           file: azure-devops-side-preview.zip
           extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
