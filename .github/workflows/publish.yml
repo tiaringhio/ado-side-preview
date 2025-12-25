@@ -24,7 +24,7 @@ jobs:
             echo "Branch name must be release/v<version> (got: $BRANCH)" >&2
             exit 1
           fi
-          if [[ ! "$VERSION" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "Version must be semver X.Y.Z (got: $VERSION)" >&2
             exit 1
           fi
