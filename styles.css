@@ -4,7 +4,7 @@
 .ado-md-side-preview .md-editor-container,
 .ado-md-side-preview .work-item-form-control-content.show-markdown-preview {
   display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  grid-template-columns: var(--ado-md-editor, 50%) 1fr !important;
   grid-template-rows: auto auto !important;
   column-gap: 12px !important;
   align-items: stretch !important;
@@ -121,7 +121,7 @@
 
 .ado-md-side-preview .comment-editor.markdown-comment-editor {
   display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  grid-template-columns: var(--ado-md-editor, 50%) 1fr !important;
   grid-template-rows: auto auto !important;
   column-gap: 12px !important;
   align-items: stretch !important;
