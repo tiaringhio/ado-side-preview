@@ -5,6 +5,8 @@ Azure DevOps Side Preview improves the Markdown editor in Work Items and Comment
 ## Features
 - Side-by-side layout (50/50) for editor and preview
 - Toolbar on a full-width row under the editor
+- Sync scroll between editor and preview
+- Adjustable editor width (30%–75%)
 - Works for Work Items and Comments
 - No data collection
 
