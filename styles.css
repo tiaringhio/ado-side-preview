@@ -5,7 +5,7 @@
 .ado-md-side-preview .work-item-form-control-content.show-markdown-preview {
   display: grid !important;
   grid-template-columns: var(--ado-md-editor, 50%) 1fr !important;
-  grid-template-rows: auto auto !important;
+  grid-template-rows: 1fr auto !important;
   column-gap: 12px !important;
   align-items: stretch !important;
 }
@@ -24,6 +24,11 @@
 .ado-md-side-preview .work-item-form-control-content.show-markdown-preview > .flex-column {
   grid-column: 1 !important;
   grid-row: 1 !important;
+  align-self: stretch !important;
+}
+
+.ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-content.markdown-editor-preview.markdown-preview > :first-child {
+  margin-top: 0 !important;
 }
 
 .ado-md-side-preview .work-item-form-control-content.show-markdown-preview .markdown-editor.work-item-form-control.bolt-textfield,
@@ -117,12 +122,18 @@
   order: 2 !important;
   grid-column: 2 !important;
   grid-row: 1 !important;
+  padding: 8px 12px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  align-self: stretch !important;
+  height: 100% !important;
+  overflow-y: auto !important;
 }
 
 .ado-md-side-preview .comment-editor.markdown-comment-editor {
   display: grid !important;
   grid-template-columns: var(--ado-md-editor, 50%) 1fr !important;
-  grid-template-rows: auto auto !important;
+  grid-template-rows: 1fr auto !important;
   column-gap: 12px !important;
   align-items: stretch !important;
 }
