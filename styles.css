@@ -125,6 +125,9 @@
   padding: 8px 12px !important;
   margin: 0 !important;
   box-sizing: border-box !important;
+  align-self: stretch !important;
+  height: 100% !important;
+  overflow-y: auto !important;
 }
 
 .ado-md-side-preview .comment-editor.markdown-comment-editor {
