@@ -54,7 +54,7 @@
         -webkit-appearance: none;
         border: 2px solid hsl(240 3.7% 15.9%);
         border-radius: 0.25rem;
-        background: wh;
+        background: white;
         position: relative;
         flex-shrink: 0;
         transition: all 0.2s ease;
@@ -201,10 +201,11 @@
         <input type="checkbox" id="syncScroll" />
         <div class="checkbox-content">
           <div class="checkbox-label">Sync scroll</div>
+          <div class="checkbox-description" style="text-align: left;">Syncs the scroll position between editor and preview when both are visible side-by-side</div>
         </div>
       </label>
 
-      <p class="checkbox-description">Refresh the page if it doesn't work</p>
+      <p class="checkbox-description">Refresh the page if scroll sync doesn't activate</p>
 
     </div>
     <script src="popup.js"></script>
